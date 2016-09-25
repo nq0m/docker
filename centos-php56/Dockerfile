@@ -32,6 +32,12 @@ RUN yum -y install \
     php-xml \
     php-xmlrpc
 
+ADD /php-fpm.conf /etc/php-fpm.conf
+
+ADD /www.conf /etc/php-fpm.d/www.conf
+
+RUN mkdir -p /srv/www
+
 EXPOSE 9000
 
 CMD ["/usr/sbin/php-fpm", "-F"]
