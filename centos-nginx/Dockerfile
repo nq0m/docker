@@ -13,6 +13,6 @@ RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
 RUN mkdir -p /srv/www
 
-EXPOSE 80
+EXPOSE 80 443
 
 CMD ["nginx", "-g", "daemon off;"]
