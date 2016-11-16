@@ -30,7 +30,9 @@ RUN yum -y install \
     php-snmp \
     php-tidy \
     php-xml \
-    php-xmlrpc
+    php-xmlrpc \
+    php-opcache \
+    php-pecl-apcu
 
 ADD /php-fpm.conf /etc/php-fpm.conf
 
